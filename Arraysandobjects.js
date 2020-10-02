@@ -1,71 +1,3 @@
-// JS Arrays // Objs
-// NOTE: movies array is defined at the end of the file
-
-/* Ex.11
-   Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
-*/
-
-/* Ex.12 
-    Write the function OlderMovie that finds the older movie in the array
-*/
-
-/* Ex.13
-    Write the function CountMovies that returns the number of movies into the array
-*/
-
-/* Ex.14
-    Write the function OnlyTitles that creates an array with only the titles of the movies
-*/
-
-/* Ex.15
-   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
-*/
-
-/* Ex.16 
-    Write the function GetMovieById that receives an ID and returns the movie with the given ID
-*/
-
-/* Ex.17
-    Write the function SumYears that returns the sum of the years the movie has been produced
-*/
-
-/* Ex.18
-    Write the function SearchMovie that receives a string and returns all the movies with that string in the title
-*/
-
-/* Ex.19
-    Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
-*/
-
-/* Ex.20
-   Write the function DeleteX that receives a number and returns an array without the element in that position
-*/
-
-// JS Advanced
-
-/* Ex.21
-  Create a function HalfTree that recives the height creates an "*" half tree with that height
-  Example:
-  HalfTree(3)
-  *
-  **
-  ***
-*/
-
-/* Ex.22 
-  Create a function Tree that receives the height and creates an "*" tree with that height
-  Example: 
-  Tree(3)
-    *  
-   *** 
-  *****
-*/
-
-/* Ex.23
-  Create a function IsItPrime that receives a number and return true if the number is a prime number
-*/
-
-/* Movies array is an example array, used for the exs. Don't change it :)  */
 const movies = [
     {
       Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -181,3 +113,130 @@ const movies = [
     },
   ];
   
+
+
+
+// JS Arrays // Objs
+// NOTE: movies array is defined at the end of the file
+
+/* Ex.11
+   Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
+*/
+
+function DeleteProp (name,S){
+
+    let obj = {
+        name: name
+    }
+    
+ if (obj.name === S ){
+
+    delete obj.name;
+    return obj
+ }
+
+
+}
+
+/* Ex.12 
+    Write the function OlderMovie that finds the older movie in the array
+*/
+
+function OlderMovie (){
+   
+let oldestyear = movies[0].Year
+
+
+for (i=0;i<movies.length;i++){
+ if (movies.Year < oldestyear){
+     oldestyear = movies.Year
+    
+
+ }
+
+ return oldestyear
+}
+
+}
+
+console.log(OlderMovie())
+
+
+
+
+
+/* Ex.13
+    Write the function CountMovies that returns the number of movies into the array
+*/
+
+function CountMovies (){
+
+    let numberofmovies = 0;
+    for (i=0;i<movies.length;i++){
+
+        if ((movies.Type)==='movie'){
+            numberofmovies +=1;
+
+        }
+        
+    }
+    return numberofmovies;
+
+
+}
+
+console.log(CountMovies())
+
+/* Ex.14
+    Write the function OnlyTitles that creates an array with only the titles of the movies
+*/
+
+/* Ex.15
+   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
+*/
+
+/* Ex.16 
+    Write the function GetMovieById that receives an ID and returns the movie with the given ID
+*/
+
+/* Ex.17
+    Write the function SumYears that returns the sum of the years the movie has been produced
+*/
+
+/* Ex.18
+    Write the function SearchMovie that receives a string and returns all the movies with that string in the title
+*/
+
+/* Ex.19
+    Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
+*/
+
+/* Ex.20
+   Write the function DeleteX that receives a number and returns an array without the element in that position
+*/
+
+// JS Advanced
+
+/* Ex.21
+  Create a function HalfTree that recives the height creates an "*" half tree with that height
+  Example:
+  HalfTree(3)
+  *
+  **
+  ***
+*/
+
+/* Ex.22 
+  Create a function Tree that receives the height and creates an "*" tree with that height
+  Example: 
+  Tree(3)
+    *  
+   *** 
+  *****
+*/
+
+/* Ex.23
+  Create a function IsItPrime that receives a number and return true if the number is a prime number
+*/
+
+/* Movies array is an example array, used for the exs. Don't change it :)  */
