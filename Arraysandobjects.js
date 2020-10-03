@@ -174,7 +174,7 @@ function CountMovies (){
     let numberofmovies = 0;
     for (i=0;i<movies.length;i++){
 
-        if ((movies.Type)==='movie'){
+        if (movies.find(movies => movies.Type === 'movie')){
             numberofmovies +=1;
 
         }
