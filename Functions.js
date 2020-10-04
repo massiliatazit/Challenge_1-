@@ -169,16 +169,7 @@ function RollTheDices(n){
     return DiceObj;
 
 }
-
     console.log('Ex8# ', RollTheDices(5))
-
-
-
-
-
-
-
-
 
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
