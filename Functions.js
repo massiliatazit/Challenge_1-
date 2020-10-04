@@ -131,8 +131,10 @@ function WhatDayIsIt(day) {
             break
         case day === 6:
             console.log('Day is: Saturday')
+            break
         case day === 0:
             console.log('Day is: Sunday')
+            break
         
         default :
         console.log('It is not a day of the week ')
