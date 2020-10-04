@@ -153,7 +153,7 @@ function OlderMovie (){
 
 for (i=0;i<movies.length;i++){
 
- if (movies[i].Year < oldestyear){
+ if (parseInt(movies[i].Year) < oldestyear){
   oldestyear = movies[i].Year
   
  }
@@ -194,18 +194,15 @@ console.log(CountMovies())
     Write the function OnlyTitles that creates an array with only the titles of the movies
 */
 function OnlyTitles (){
- 
   
   let Title_array=[]
 
 for (i=0; i<movies.length; i++){
  
-
     Title_array.push(movies[i].Title)
 
   }
   return Title_array;
-
 }
 
 console.log(OnlyTitles())
