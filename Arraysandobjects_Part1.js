@@ -212,3 +212,8 @@ console.log(OnlyTitles())
 let Title_arr = movies.map(movies => movies.Title)
 
 console.log(Title_arr)
+
+
+
+
+//test

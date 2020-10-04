@@ -119,82 +119,22 @@ const movies = [
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
 
-/* Ex.11
-   Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
-*/
-
-function DeleteProp (name,S){
-
-    let obj = {
-        name: name
-    }
-    
- if (obj.name === S ){
-
-    delete obj.name;
-    return obj
- }
-
-
-}
-
-/* Ex.12 
-    Write the function OlderMovie that finds the older movie in the array
-*/
-
-function OlderMovie (){
-   
-let oldestyear = movies[0].Year
-
-
-for (i=0;i<movies.length;i++){
- if (movies.Year < oldestyear){
-     oldestyear = movies.Year
-    
-
- }
-
- return oldestyear
-}
-
-}
-
-console.log(OlderMovie())
-
-
-
-
-
-/* Ex.13
-    Write the function CountMovies that returns the number of movies into the array
-*/
-
-function CountMovies (){
-
-    let numberofmovies = 0;
-    for (i=0;i<movies.length;i++){
-
-        if (movies.find(movies => movies.Type === 'movie')){
-            numberofmovies +=1;
-
-        }
-        
-    }
-    return numberofmovies;
-
-
-}
-
-console.log(CountMovies())
-
-/* Ex.14
-    Write the function OnlyTitles that creates an array with only the titles of the movies
-*/
-
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
+ const OnlyThisMillennium = function(){
 
+  let moviemillinium= [];
+  for (let i=0; i<movies.length; i++){
+    if ( parseInt(movies[i].Year)>= 2000){
+      
+    moviemillinium.push(movies[i])
+  }
+ }
+ return moviemillinium
+}
+
+console.log(OnlyThisMillennium())
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
 */
