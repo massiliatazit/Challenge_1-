@@ -115,25 +115,25 @@ function WhatDayIsIt(day) {
    
     switch(true){
         case day === 1:
-            console.log('Day is: Monday')
+            console.log('Today is: Monday')
             break
         case day === 2:
-            console.log('Day is: Tuesday')
+            console.log('Today is: Tuesday')
             break
         case day === 3:
-            console.log('Day is: Wednesday')
+            console.log('Today is: Wednesday')
             break
         case day === 4:
-            console.log('Day is: Thursday')
+            console.log('Today is: Thursday')
             break
         case day === 5:
-            console.log('Day is: Friday')
+            console.log('Today is: Friday')
             break
         case day === 6:
-            console.log('Day is: Saturday')
+            console.log('Today is: Saturday')
             break
         case day === 0:
-            console.log('Day is: Sunday')
+            console.log('Today is: Sunday')
             break
         
         default :
