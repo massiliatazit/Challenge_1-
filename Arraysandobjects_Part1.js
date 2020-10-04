@@ -113,9 +113,6 @@ const movies = [
     },
   ];
   
-
-
-
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
 
@@ -124,29 +121,23 @@ const movies = [
    and returns the object after deleting the property with that given name
 */
 
-
 let user = {
     name: 'Mark',
-    surname : 'szwarowski'
-    
+    surname : 'szwarowski'  
 }
-
 function DeleteProp (obj,objName){
 
  if (obj.name === 'Mark' ){
 
     delete obj.name;
-    
  }
  return obj
-
 }
 console.log (DeleteProp(user,'user'))
 
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
 */
-
 function OlderMovie (){
    
  let oldestyear = movies[0].Year;
@@ -155,16 +146,10 @@ for (i=0;i<movies.length;i++){
 
  if (parseInt(movies[i].Year) < oldestyear){
   oldestyear = movies[i].Year
-  
- }
-
 
  }
-
- return oldestyear
+ } return oldestyear
 }
-
-
 
 console.log(OlderMovie())
 
@@ -180,14 +165,10 @@ function CountMovies (){
         if (movies[i].Type === 'movie'){
             numberofmovies +=1;
 
-        }
-        
+        } 
     }
     return numberofmovies;
-
-
 }
-
 console.log(CountMovies())
 
 /* Ex.14
@@ -206,7 +187,6 @@ for (i=0; i<movies.length; i++){
 }
 
 console.log(OnlyTitles())
-
 
 //Second method to create array of titles 
 let Title_arr = movies.map(movies => movies.Title)
