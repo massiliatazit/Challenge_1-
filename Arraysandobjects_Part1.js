@@ -213,7 +213,19 @@ let Title_arr = movies.map(movies => movies.Title)
 
 console.log(Title_arr)
 
+/* Ex.15
+   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
+*/
+const OnlyThisMillennium = function(){
 
+  let moviemillinium= [];
+  for (let i=0; i<movies.length; i++){
+    if ( parseInt(movies[i].Year)>= 2000){
+      
+    moviemillinium.push(movies[i])
+  }
+ }
+ return moviemillinium
+}
 
-
-//test
+console.log(OnlyThisMillennium())
