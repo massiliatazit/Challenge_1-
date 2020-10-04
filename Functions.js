@@ -139,8 +139,6 @@ function WhatDayIsIt(day) {
 
     }
     return day;
-    
-    
 }
 console.log('Ex7# ',WhatDayIsIt(new Date().getDay()))
 
@@ -154,18 +152,15 @@ console.log('Ex7# ',WhatDayIsIt(new Date().getDay()))
 
 */
 function RollTheDices(n){
-
-     
+ 
     let DiceObj = {}
 
     for (i=0; i<n; i++){
         
         let dice1 = Dice(n)
         let dice2 = Dice(n)
-        
-        
         DiceObj.sum = dice1+dice2;
-        let values = []
+    
         DiceObj.values = [dice1,dice2]
         //console.log(Dice(n))
 
@@ -190,16 +185,15 @@ function RollTheDices(n){
 */
 
 
-function HowManyDays (Date){
+function HowManyDays (Date2){
 
-
-    currentdate = Date();
-    numberofdays = currentdate - Date;
+    const anyDate = new Date(2020, 1, 7);
+    numberofdays = ((Math.abs(anyDate - Date2))/24 * 60 * 60 * 1000);
  return numberofdays
 
 
 }
-
+console.log(HowManyDays(new Date(1995,09,11)))
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
@@ -213,10 +207,7 @@ if (( todayDate.getDate() == 11 )&& (todayDate.getMonth() == 12 )&& (todayDate.g
 
 {
     return false;
-
-
 }
-
 
 }
 
