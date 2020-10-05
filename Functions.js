@@ -90,15 +90,12 @@ function IsThisAnEmail(email) {
              valid = true;
 
             console.log('Your email is valid')
-
         }
-
     }
     else{
         valid = false;
 
         console.log('Your email is not valid')
-
     }
 
     return valid;
@@ -165,7 +162,6 @@ function RollTheDices(n){
     
         DiceObj.values = [dice1,dice2]
         //console.log(Dice(n))
-
     }
 
     return DiceObj;
@@ -178,27 +174,22 @@ function RollTheDices(n){
 function HowManyDays (Date2){
 
     const anyDate = new Date(2020, 1, 7);
-    numberofdays = ((Math.abs(anyDate - Date2))/24 * 60 * 60 * 1000);
+    const oneday = 24 * 60 * 60 * 1000;
+    numberofdays = Math.abs( Math.ceil((anyDate.getTime() - Date2.getTime())/(oneday)));
  return numberofdays
-
-
 }
-console.log(HowManyDays(new Date(1995,09,11)))
+console.log('Ex.9',HowManyDays(new Date(1995,09,11)))
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
 const IsTodayMyBDay = (todayDate) => {
    
     
-if (( todayDate.getDate() == 11 )&& (todayDate.getMonth() == 12 )&& (todayDate.getFullYear() == 1995)){
+if (( todayDate.getDate() == 11 ) && (todayDate.getMonth() == 12 )&& (todayDate.getFullYear() == 1995)){
 
     return  true;
-}else
-
-{
-    return false;
+}else{
+     return false;
 }
-
 }
-
 console.log('Ex10# ',IsTodayMyBDay(new Date()))
