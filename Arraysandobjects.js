@@ -113,16 +113,89 @@ const movies = [
     },
   ];
   
-
-
-
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
+
+/* Ex.11
+   Write the function DeleteProp that receives an object and a string, 
+   and returns the object after deleting the property with that given name
+*/
+
+let user = {
+    name: 'Mark',
+    surname : 'szwarowski'  
+}
+function DeleteProp (obj,objName){
+
+ if (obj.name === 'Mark' ){
+
+    delete obj.name;
+ }
+ return obj
+}
+console.log ('Ex.11#\n ',DeleteProp(user,'user'))
+
+/* Ex.12 
+    Write the function OlderMovie that finds the older movie in the array
+*/
+function OlderMovie (){
+   
+ let oldestyear = movies[0].Year;
+
+for (i=0;i<movies.length;i++){
+
+ if (parseInt(movies[i].Year) < oldestyear){
+  oldestyear = movies[i].Year
+
+ }
+ } return oldestyear
+}
+
+console.log('Ex.12#\n ',OlderMovie())
+
+/* Ex.13
+    Write the function CountMovies that returns the number of movies into the array
+*/
+
+function CountMovies (){
+
+    let numberofmovies = 0;
+    for (i=0;i<movies.length;i++){
+
+        if (movies[i].Type === 'movie'){
+            numberofmovies +=1;      
+          } 
+    }
+    return numberofmovies;
+}
+console.log('Ex.13#\n ',CountMovies())
+
+/* Ex.14
+    Write the function OnlyTitles that creates an array with only the titles of the movies
+*/
+function OnlyTitles (){
+  
+  let Title_array=[]
+
+for (i=0; i<movies.length; i++){
+ 
+    Title_array.push(movies[i].Title)
+
+  }
+  return Title_array;
+}
+
+console.log('Ex.14#\n',OnlyTitles())
+
+//Second method to create array of titles 
+let Title_arr = movies.map(movies => movies.Title)
+
+console.log(Title_arr)
 
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
- const OnlyThisMillennium = function(){
+const OnlyThisMillennium = function(){
 
   let moviemillinium= [];
   for (let i=0; i<movies.length; i++){
@@ -130,53 +203,91 @@ const movies = [
       
     moviemillinium.push(movies[i])
   }
- }
- return moviemillinium
+ }return moviemillinium
 }
 
-console.log(OnlyThisMillennium())
-/* Ex.16 
-    Write the function GetMovieById that receives an ID and returns the movie with the given ID
-*/
+console.log('Ex.15#\n ',OnlyThisMillennium())
 
+
+/* Ex.16 
+    Write the function GetMovieById that receives an ID and returns the movie with the given ID    
+*/
+const GetMovieById = function(ID){
+  for (let i=0; i<movies.length; i++){
+    if (ID === movies[i].imdbID){
+
+      return (movies[i])
+
+    }
+  }
+}
+
+console.log('Ex.16#\n ',GetMovieById("tt2395427"))
 /* Ex.17
     Write the function SumYears that returns the sum of the years the movie has been produced
 */
+//const SumYears =  function(){
+
+  
+
+//} 
+
+
+
 
 /* Ex.18
     Write the function SearchMovie that receives a string and returns all the movies with that string in the title
 */
 
+const SearchMovie = function(str){
+  let movie_serie = []
+  
+  for (let i=0; i<movies.length; i++){
+    
+    if (movies[i].Title.includes(str)){
+      
+      movie_serie.push(movies[i])
+  }
+ }
+ return movie_serie;
+}
+
+console.log('Ex.18# \n',SearchMovie('Lord'))
 /* Ex.19
     Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
 */
+
+const SearchAndDivide = function(str){
+  let movies_sections = {}
+  let av= []
+  let others = []
+
+  for (let i=0; i<movies.length; i++){
+   
+  if ((movies[i].Title).match(str)){
+
+    av.push(movies[i].Title)
+    movies_sections.match_movie = av
+  }
+    others.push(movies[i].Title)
+    movies_sections.non_match = others
+}
+return movies_sections;
+}
+console.log('Ex.19# ',SearchAndDivide(/Avengers/gi))
+
 
 /* Ex.20
    Write the function DeleteX that receives a number and returns an array without the element in that position
 */
 
-// JS Advanced
+let test = ['abc','def','ghk','lmn']
+const Deletex = function(nmbr){
 
-/* Ex.21
-  Create a function HalfTree that recives the height creates an "*" half tree with that height
-  Example:
-  HalfTree(3)
-  *
-  **
-  ***
-*/
-
-/* Ex.22 
-  Create a function Tree that receives the height and creates an "*" tree with that height
-  Example: 
-  Tree(3)
-    *  
-   *** 
-  *****
-*/
-
-/* Ex.23
-  Create a function IsItPrime that receives a number and return true if the number is a prime number
-*/
-
-/* Movies array is an example array, used for the exs. Don't change it :)  */
+ for (let i=0; i<test.length; i++){
+  if (i === nmbr){
+    test.splice (nmbr,1)
+  } 
+ } return test;
+}
+console.log('Ex.20# ',Deletex(2))
