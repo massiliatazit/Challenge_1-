@@ -65,8 +65,6 @@ const OnlyLetters = function(S){
           S = S.replace(Num[i],'' )
 
         }
-    
-
     }
     
     return S
@@ -152,16 +150,17 @@ console.log('Ex7# ',WhatDayIsIt(new Date().getDay()))
 */
 function RollTheDices(n){
  
-    let DiceObj = {}
+    let DiceObj = {
+        values:[],
+        sum:0,
+    }
 
     for (i=0; i<n; i++){
-        
-        let dice1 = Dice(n)
-        let dice2 = Dice(n)
-        DiceObj.sum = dice1+dice2;
+        let x = Dice()
+        DiceObj.sum += x;
     
-        DiceObj.values = [dice1,dice2]
-        //console.log(Dice(n))
+        DiceObj.values.push(x)
+      
     }
 
     return DiceObj;
